@@ -1,0 +1,4 @@
+/.vscode
+/media
+/db.sqlite3
+*.pyc
