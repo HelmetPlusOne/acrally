@@ -145,3 +145,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SITE_ID = 1
 
 WIKI_ATTACHMENTS_EXTENSIONS = ["jpg", "png"]
+
+WIKI_ACCOUNT_HANDLING = False

@@ -1,11 +1,13 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.template import loader
 
-# Create your views here.
-
-from django.http import JsonResponse
 from .models import Track
 
 
 def index(request):
     tracks = list(Track.objects.order_by("name").values())
-    return JsonResponse(tracks, safe=False, json_dumps_params={'indent': 4})
+    template = loader.get_template('tracks/index.html')
+    context = {
+        'tracks': tracks,
+    }
+    return HttpResponse(template.render(context, request))
