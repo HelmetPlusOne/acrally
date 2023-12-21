@@ -22,7 +22,7 @@ urlpatterns = [
     path("tracks/", include("tracks.urls")),
     path('admin/', admin.site.urls),
     path('notifications/', include('django_nyt.urls')),
-    path('wiki/', include('wiki.urls')),
+    path('', include('wiki.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
