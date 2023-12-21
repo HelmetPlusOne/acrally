@@ -71,7 +71,7 @@ ROOT_URLCONF = 'acrally.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -145,6 +145,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID = 1
 
-WIKI_ATTACHMENTS_EXTENSIONS = ["jpg", "png"]
+WIKI_ATTACHMENTS_EXTENSIONS = ["jpg", "png", "webp", "pdf"]
 
 WIKI_ACCOUNT_HANDLING = False
